@@ -1,0 +1,56 @@
+/* General styles */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px;
+}
+
+/* Word section styles */
+#word {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Incorrect guesses section styles */
+#incorrect-guesses {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+/* Hangman image styles */
+#hangman img {
+    width: 100%;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 50%;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
