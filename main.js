@@ -1,3 +1,5 @@
+import words from "./words.js";
+
 // Select a random word from the array
 const word = words[Math.floor(Math.random() * words.length)];
 
