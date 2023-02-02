@@ -1,4 +1,4 @@
-const words = [
+const wordList = [
   'newbie',
   'cinema',
   'grapple',
@@ -26,3 +26,5 @@ const words = [
   "algorithm",
   "variable"
 ];
+
+export {wordList}
