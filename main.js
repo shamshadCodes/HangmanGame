@@ -1,46 +1,41 @@
-// import wordList from "./words.js";
+// import wordList from "./wordsCopy.js";
 
-/**
-* Hangman Game in Javascript
+/**Hangman Game in Javascript
 * @see https://github.com/shamshadCodes/HangmanGame
 * @author shamshadCodes
 **/
 var Hangman = (function () {
   'use strict';
 
-  /**
-   * Constructor
+  /**Constructor
    * @param {string} elId An ID used in this class and when rendering the DOM Elements
    */
   function Hangman(elId) {
       // DOM is ready
-      this.elId       = elId;
+      this.elId = elId;
       // Possible words
-      this.words      = [
+      this.words = [
           'PROGRAMMER', 'BRAINSTORM', 'CREATIVE', 'LOLLIPOP',
           'CULTURE', 'RAZORSHARP', 'SCREWDRIVER', 'TYPEWRITER'
       ];
   }
 
-  /**
-   * Resets the hangman game
+  /**Resets the hangman game
    */
   Hangman.prototype.reset = function () {
       // Variables
-      this.STOPPED        = false;
-      this.MISTAKES       = 0;
-      this.GUESSES        = [];
+      this.STOPPED = false;
+      this.MISTAKES = 0;
+      this.GUESSES = [];
       // Select a random word from the list
-      this.WORD           = this.words[Math.floor(Math.random() * this.words.length)];
+      this.WORD = this.words[Math.floor(Math.random() * this.words.length)];
       // DOM Elements
       this.hideElementByClass('h');
       this.showElementByIdWithContent(this.elId + "_guessbox", null);
       this.showElementByIdWithContent(this.elId + "_word", this.getGuessedfWord());
   };
 
-  /**
-   * Logic after the user guessed on a letter
-   *
+  /**Logic after the user guessed on a letter
    * @param {char} letter A letter guessed by our enduser
    */
   Hangman.prototype.guess = function (letter) {
@@ -76,10 +71,8 @@ var Hangman = (function () {
       }
   };
 
-  /**
-   * Displays HTML element by id with the following content
-   *
-   * @param {string} elId     DOM ID
+  /**Displays HTML element by id with the following content
+   * @param {string} elId -> DOM ID
    * @param {HTML} content 
    */
   Hangman.prototype.showElementByIdWithContent = function (elId, content) {
@@ -89,9 +82,7 @@ var Hangman = (function () {
       document.getElementById(elId).style.opacity = 1;
   };
 
-  /**
-   * Hides element by class
-   *
+  /** Hides element by class
    * @param {string} elClass DOM class
    */
   Hangman.prototype.hideElementByClass = function (elClass) {
@@ -101,9 +92,7 @@ var Hangman = (function () {
       }
   };
 
-  /**
-   * The word but only with letters the user has guessed so far is visible
-   */
+  //The word but only with letters the user has guessed so far is visible
   Hangman.prototype.getGuessedfWord = function () {
       var result = "", i;
       for (i = 0; i < this.WORD.length; i++) {
