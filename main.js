@@ -33,7 +33,7 @@ Hangman.prototype.reset = function () {
     this.GUESSES = [];
     // Select a random word from the list
     this.WORD = this.words[Math.floor(Math.random() * this.words.length)];
-    // DOM Elements
+    // DOM Elements 
     this.hideElementByClass('h');
     this.showElementByIdWithContent(this.elId + "_guessbox", null);
     this.showElementByIdWithContent(this.elId + "_word", this.getGuessedfWord());
