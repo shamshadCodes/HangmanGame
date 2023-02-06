@@ -14,10 +14,10 @@ a {
     font-size: 2em;
 }
 
-section#hangman {
+/* section#hangman {
     height: 30.5em;
     overflow: hidden;
-}
+} */
 
 #hangm {
     text-align: center;

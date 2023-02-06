@@ -1,4 +1,7 @@
-// import wordList from "./wordsCopy.js";
+// const wordList = require ('./words.js');
+// import {wordList} from './words.js';
+// import pkg from "./words.js"
+// const { wordList } = pkg
 
 /**Hangman Game in Javascript
 * @see https://github.com/shamshadCodes/HangmanGame

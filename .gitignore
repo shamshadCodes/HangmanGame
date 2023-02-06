@@ -13,8 +13,12 @@ Thumbs.db
 
 # Node.js
 node_modules
+tempMain.js
+test.js
 
 # IDE files
 .vscode
 .idea
 
+#HTML File
+temporaryIndex.html
