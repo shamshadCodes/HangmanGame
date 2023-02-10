@@ -74,4 +74,4 @@ class Hangman {
 }
 
 let hangman = new Hangman('hangm');
-// console.log(typeof hangman)
+console.log('main', typeof hangman)

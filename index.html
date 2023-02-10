@@ -9,6 +9,15 @@
     </head>
     <body>
         <div id="hangm">
+                <script>
+                    function logAndCreateButton() {
+                    const btnStart = document.getElementById("btn-start");
+                    btnStart.addEventListener("click", () => hangman.reset());
+                    }
+        
+                    window.addEventListener("load", logAndCreateButton);
+                </script>
+
                 <div style="height: 2em; margin-bottom: 3em;">
                     <div id="hangm_end" class="h"></div>
                 </div>
@@ -36,7 +45,7 @@
                         <input id="guess" onkeyup="hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" id="btn-start" class="btn-lg btn-info" onclick="hangman.reset(); return false;" >New Game</button>
+                        <button type="button" id="btn-start" class="btn-lg btn-info">New Game</button>
                     </div>
                 </form>
         </div>
