@@ -1,5 +1,5 @@
 // const wordList = require ('./words.js');
-// import {wordList} from './words.js';
+import {wordList} from './words.js';
 // import pkg from "./words.js"
 // const { wordList } = pkg
 
