@@ -1,7 +1,8 @@
 // const wordList = require ('./words.js');
-// import {wordList} from './words.js';
+import wordList from './words.js';
 // import pkg from "./words.js"
 // const { wordList } = pkg
+// import { Hangman } from "./tempMain.js";
 
 /**Hangman Game in Javascript
 * @see https://github.com/shamshadCodes/HangmanGame
@@ -11,10 +12,7 @@
 class Hangman {
     constructor (elId) {
         this.elId = elId;
-        this.words = [
-                        'PROGRAMMER', 'BRAINSTORM', 'CREATIVE', 'LOLLIPOP',
-                        'CULTURE', 'RAZORSHARP', 'SCREWDRIVER', 'TYPEWRITER'
-                    ];
+        this.words = wordList() //['DEVELOPER', 'ESTATE', 'GRAPHICS', 'CANDYLAND','HERITAGE', 'SCISSOR', 'CLIPPERS', 'PRINTER'];
     }
 
     reset() {
@@ -75,4 +73,5 @@ class Hangman {
     }
 }
 
-const hangman = new Hangman('hangm');
+let hangman = new Hangman('hangm');
+// console.log(typeof hangman)

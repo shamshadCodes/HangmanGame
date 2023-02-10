@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/shamshadCodes/HangmanGame.git"
   },
-  "type": "module",
   "keywords": [
     "Hangman"
   ],
@@ -19,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/shamshadCodes/HangmanGame/issues"
   },
-  "homepage": "https://github.com/shamshadCodes/HangmanGame#readme"
+  "homepage": "https://github.com/shamshadCodes/HangmanGame#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2"
+  }
 }
