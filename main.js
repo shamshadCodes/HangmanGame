@@ -1,8 +1,4 @@
-// const wordList = require ('./words.js');
 import wordList from './words.js';
-// import pkg from "./words.js"
-// const { wordList } = pkg
-// import { Hangman } from "./tempMain.js";
 
 /**Hangman Game in Javascript
 * @see https://github.com/shamshadCodes/HangmanGame
@@ -12,14 +8,14 @@ import wordList from './words.js';
 class Hangman {
     constructor (elId) {
         this.elId = elId;
-        this.words = wordList() //['DEVELOPER', 'ESTATE', 'GRAPHICS', 'CANDYLAND','HERITAGE', 'SCISSOR', 'CLIPPERS', 'PRINTER'];
+        this.words = wordList
     }
 
     reset() {
         this.STOPPED = false;
         this.MISTAKES = 0;
         this.GUESSES = [];
-        this.WORD = this.words[Math.floor(Math.random() * this.words.length)];
+        this.WORD = this.words[Math.floor(Math.random() * this.words.length)].toUpperCase();
         this.hideElementByClass('h');
         this.showElementByIdWithContent(this.elId + "_guessbox", null);
         this.showElementByIdWithContent(this.elId + "_word", this.getGuessedWord());
@@ -67,11 +63,26 @@ class Hangman {
         let result = "";
         for (let i = 0; i < this.WORD.length; i++) {
             result += (this.GUESSES.indexOf(this.WORD[i]) > -1) ?
-                    this.WORD[i] : "_";
+                this.WORD[i] : "_" ;
         }
         return result;
     }
 }
 
 let hangman = new Hangman('hangm');
-console.log('main', typeof hangman)
+
+//Adding the 'Reset' button event listener
+function loadAndCreateButton() {
+    const btnStart = document.getElementById("btn-start");
+    btnStart.addEventListener("click", () => hangman.reset());
+}
+
+window.addEventListener("load", loadAndCreateButton);
+
+//Adding the input box event listener
+const input = document.getElementById("guess")
+
+input.addEventListener("keyup", (event) => {
+    hangman.guess(event.target.value);
+    event.target.value = "";
+});

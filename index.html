@@ -9,15 +9,6 @@
     </head>
     <body>
         <div id="hangm">
-                <script>
-                    function logAndCreateButton() {
-                    const btnStart = document.getElementById("btn-start");
-                    btnStart.addEventListener("click", () => hangman.reset());
-                    }
-        
-                    window.addEventListener("load", logAndCreateButton);
-                </script>
-
                 <div style="height: 2em; margin-bottom: 3em;">
                     <div id="hangm_end" class="h"></div>
                 </div>
@@ -42,7 +33,8 @@
                         <div style="height: 4em;">
                             Guess the word:<div id="hangm_word"></div>
                         </div>
-                        <input id="guess" onkeyup="hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
+
+                        <input id = "guess" type="text" placeholder="">                        
                     </div>
                     <div class="col-sm-3">
                         <button type="button" id="btn-start" class="btn-lg btn-info">New Game</button>
@@ -54,9 +46,6 @@
             <a class="github" alt="github" href="https://github.com/shamshadCodes/HangmanGame">
                 <i class="fa fa-github" aria-hidden="true"></i>
             </a>
-            <!-- <a class="twitter" alt="twitter" href="http://www.twitter.com/shamshadCodes" style="margin-right:5px;">
-                <i class="fa fa-twitter" aria-hidden="true"></i> 
-            </a> -->
         </p>
     </body>
 </html>
